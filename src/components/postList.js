@@ -4,7 +4,7 @@ const PostList = ({posts}) => {
 
     return(
         <div>
-            {posts.map(post=><Post key={post.id} title={post.title} body={post.body} />)}
+            {posts.map(post=><Post key={post.id} id={post.id} title={post.title} body={post.body} />)}
         </div>
     )
 

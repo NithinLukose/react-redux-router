@@ -1,8 +1,10 @@
 import React,{useEffect} from 'react';
 import {useDispatch} from 'react-redux'
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import {fetchPosts} from './actions'
 import VisiblePosts from './containers/visiblePosts'
 import './App.css';
+import Simple from './components/simple'
 
 const App = () => {
 
@@ -12,9 +14,19 @@ const App = () => {
   },[dispatch])
 
   return(
-    <>
-      <VisiblePosts />
-    </>
+    <Router>
+      
+      <Switch>
+        
+        <Route exact path="/">
+          <VisiblePosts />
+        </Route>
+        <Route path={`/posts/:id`}>
+          <Simple />
+        </Route>
+      </Switch>
+      
+    </Router>
   )
 
 }
