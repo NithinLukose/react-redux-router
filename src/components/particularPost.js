@@ -1,6 +1,13 @@
 import React from 'react'
 
 const ParticularPost = ({post}) => {
+    
+    
+    if(post.isFetching){
+        return (
+            <div>loading...</div>
+        )
+    }
     let comments = []
     if(post.comments.length>0){
         comments = post.comments

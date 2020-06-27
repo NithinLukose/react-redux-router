@@ -6,6 +6,8 @@ export const REQUEST_PARTICULAR_POST = 'REQUEST_PARTICULAR_POST'
 export const RECEIVE_PARTICULAR_POST =  'RECEIVE_PARTICULAR_POST'
 export const REQUEST_PARTICULAR_POST_COMMENT = 'REQUEST_PARTICULAR_POST_COMMENT'
 export const RECEIVE_PARTICULAR_POST_COMMENT = 'RECEIVE_PARTICULAR_POST_COMMENT'
+export const PREVIOUS_PAGE = 'PREVIOUS_PAGE'
+export const NEXT_PAGE = 'NEXT_PAGE'
 
 const requestPosts = () => ({
     type: REQUEST_POSTS,
@@ -50,10 +52,17 @@ export const fetchParticularPost = (id) => {
         //console.log(res1)
         let res2 = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
         .then(res=>res.json())
-        console.log(res2.length)
+        //console.log(res2.length)
         let res = {...res1,comments:res2}
         //console.log(res)
         dispatch(receiveParticularPost(res))       
     }
 }
 
+export const previousPage = () => ({
+    type: PREVIOUS_PAGE
+})
+
+export const nextPage = () => ({
+    type: NEXT_PAGE
+})

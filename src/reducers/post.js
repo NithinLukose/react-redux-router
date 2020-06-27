@@ -7,13 +7,14 @@ const post = (state={
     id:0,
     title:'',
     body:'',
-    comments:[]
+    comments:[],
+    isFetching:false
 },action) => {
 
     switch(action.type){
 
         case REQUEST_PARTICULAR_POST:
-            return state
+            return {...state,isFetching:true}
         
         case RECEIVE_PARTICULAR_POST:
             return {
@@ -21,7 +22,8 @@ const post = (state={
                 id:action.post.id,
                 title:action.post.title,
                 body:action.post.body,
-                comments:action.post.comments
+                comments:action.post.comments,
+                isFetching:false
             }
         default : 
             return state

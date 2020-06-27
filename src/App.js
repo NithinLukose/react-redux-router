@@ -6,12 +6,14 @@ import VisiblePosts from './containers/visiblePosts'
 import './App.css';
 import Simple from './components/simple'
 
+
 const App = () => {
 
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(fetchPosts())
   },[dispatch])
+
 
   return(
     <Router>
@@ -20,6 +22,7 @@ const App = () => {
         
         <Route exact path="/">
           <VisiblePosts />
+          
         </Route>
         <Route path={`/posts/:id`}>
           <Simple />
