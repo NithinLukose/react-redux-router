@@ -9,7 +9,8 @@ const mapStateToProps = (state) => {
     
     return {
         posts:currentPosts,
-        isFetching:state.posts.isFetching
+        isFetching:state.posts.isFetching,
+        currentPage:state.posts.currentPage
     }
 }
 

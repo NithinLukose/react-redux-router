@@ -1,11 +1,13 @@
 import React from 'react'
+import Loading from './loading'
+
 
 const ParticularPost = ({post}) => {
     
     
     if(post.isFetching){
         return (
-            <div>loading...</div>
+            <Loading />
         )
     }
     let comments = []

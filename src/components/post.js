@@ -6,9 +6,9 @@ const Post = ({id,title,body}) => {
 
     return (
 
-        <div>
+        <div className='post'>
 
-            <Link to={`/posts/${id}`}><h3>{title}</h3></Link>
+            <Link to={`/posts/${id}`} className="postLink"><h3>{title}</h3></Link>
             <p>{body}</p>
 
         </div>

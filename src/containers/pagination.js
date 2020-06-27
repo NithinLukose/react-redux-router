@@ -5,7 +5,8 @@ import Button from '../components/button'
 
 const mapStateToProps = (state,ownProps) => ({
     
-    name:ownProps.name
+    name:ownProps.name,
+    classname:ownProps.class
 })
 
 const mapDispatchToprops = (dispatch,ownProps) => ({
