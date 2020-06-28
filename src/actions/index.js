@@ -8,6 +8,7 @@ export const REQUEST_PARTICULAR_POST_COMMENT = 'REQUEST_PARTICULAR_POST_COMMENT'
 export const RECEIVE_PARTICULAR_POST_COMMENT = 'RECEIVE_PARTICULAR_POST_COMMENT'
 export const PREVIOUS_PAGE = 'PREVIOUS_PAGE'
 export const NEXT_PAGE = 'NEXT_PAGE'
+export const SET_TO_FIRST_PAGE = 'SET_TO_FIRST_PAGE'
 
 const requestPosts = () => ({
     type: REQUEST_POSTS,
@@ -26,7 +27,6 @@ const receiveParticularPost = (json) => ({
     type: RECEIVE_PARTICULAR_POST,
     post: json
 })
-
 
 
 export const fetchPosts = () => {
@@ -65,4 +65,8 @@ export const previousPage = () => ({
 
 export const nextPage = () => ({
     type: NEXT_PAGE
+})
+
+export const setToFirstPage = () => ({
+    type: SET_TO_FIRST_PAGE
 })

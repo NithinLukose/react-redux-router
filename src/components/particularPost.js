@@ -16,19 +16,26 @@ const ParticularPost = ({post}) => {
         //console.log(comments)
     }
     return(
-        <div>
-            <h1>{post.title}</h1>
-            <p>{post.body}</p>
-            
-            {comments.length>0&&comments.map(comment=><div key={comment.id}>
+        <div className="particularPost">
 
-                <h4>{comment.email}</h4>
-                <p>{comment.body}</p>
+            <div className="post">
+                <h1>{post.title}</h1>
+                <p>{post.body}</p>
+                
+                <div className="comments">
+                    <h4>comments</h4>
+                    {comments.length>0&&comments.map(comment=><div key={comment.id} className="comment">
 
-            </div>)}
+                        <h5>{comment.email}</h5>
+                        <p>{comment.body}</p>
 
+                    </div>)}
+                </div>
+
+            </div>
 
         </div>
+        
     )
 } 
 

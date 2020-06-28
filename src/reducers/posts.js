@@ -1,4 +1,4 @@
-import {REQUEST_POSTS,RECEIVE_POSTS,PREVIOUS_PAGE,NEXT_PAGE } from '../actions'
+import {REQUEST_POSTS,RECEIVE_POSTS,PREVIOUS_PAGE,NEXT_PAGE,SET_TO_FIRST_PAGE } from '../actions'
 
 const posts = (state={
     isFetching: false,
@@ -22,6 +22,8 @@ const posts = (state={
         case NEXT_PAGE:
             newPage = state.currentPage!==state.totalPage?state.currentPage+1:state.currentPage
             return {...state,currentPage:newPage}
+        case SET_TO_FIRST_PAGE:
+            return {...state,currentPage:1}
         default:
             return state
     }

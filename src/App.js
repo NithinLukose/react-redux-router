@@ -5,6 +5,7 @@ import {fetchPosts} from './actions'
 import VisiblePosts from './containers/visiblePosts'
 import './App.css';
 import Simple from './components/simple'
+import Home from './containers/home'
 
 
 const App = () => {
@@ -19,9 +20,7 @@ const App = () => {
     <Router>
       
       <Link to = '/'>
-        <div className="topnav">
-          <button href='#posts'>Posts</button>
-        </div>
+        <Home />
       </Link>
       <Switch>
         

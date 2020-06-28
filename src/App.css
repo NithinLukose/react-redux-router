@@ -33,7 +33,12 @@ button{
   margin: auto;
 
 }
+.particularPost{
 
+  width: 70%;
+  margin: auto;
+
+}
 .post{
 
   width: 100%;
@@ -50,7 +55,12 @@ button{
   color: rgb(14, 118, 160) ;
   text-decoration: none;
 }
-
+.comments{
+  background-color: rgb(232, 233, 232);
+}
+.comment{
+  padding: 10px ;
+}
 .pagination{
 
   height: 60px;
@@ -98,7 +108,9 @@ button{
 }
 
 
-/*Start of loading css*/
+
+
+/*Start of loading component css*/
 
 .lds-roller {
   display: block;
